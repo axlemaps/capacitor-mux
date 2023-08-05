@@ -45,12 +45,16 @@ android {
 repositories {
     google()
     mavenCentral()
+    maven {
+        url "https://muxinc.jfrog.io/artifactory/default-maven-release-local"
+    }
 }
 
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':capacitor-android')
+    implementation 'com.mux.video:upload:0.4.2'
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"

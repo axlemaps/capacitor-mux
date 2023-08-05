@@ -13,25 +13,37 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`uploadVideo(...)`](#uploadvideo)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### uploadVideo(...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+uploadVideo(options: UploadVideo) => Promise<{ success: boolean; }>
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+| Param         | Type                                                |
+| ------------- | --------------------------------------------------- |
+| **`options`** | <code><a href="#uploadvideo">UploadVideo</a></code> |
 
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
+**Returns:** <code>Promise&lt;{ success: boolean; }&gt;</code>
 
 --------------------
+
+
+### Interfaces
+
+
+#### UploadVideo
+
+| Prop            | Type                |
+| --------------- | ------------------- |
+| **`uploadUri`** | <code>string</code> |
+| **`videoFile`** | <code>string</code> |
 
 </docgen-api>

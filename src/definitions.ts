@@ -1,3 +1,8 @@
 export interface CapacitorMuxPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  uploadVideo(options: UploadVideo): Promise<{ success: boolean }>;
+}
+
+export interface UploadVideo {
+  uploadUri: string;
+  videoFile: string;
 }
